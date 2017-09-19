@@ -1,0 +1,714 @@
+::selection{
+  background: transparent;
+}
+
+.main-container {
+  width: 996px;
+  height: 551px;
+  background: url("../img/background.jpg") no-repeat center / contain;
+  position: relative;
+
+  .logo{
+    width: 253px;
+    height: 238px;
+    position: absolute;
+    top:0;
+    left:0;
+    background: url("../img/logo.png") no-repeat center / contain;
+    margin:0;
+    z-index: 10;
+  }
+
+  .progress-container {
+    width: 233px;
+    height: 293px;
+    z-index: 9;
+    position: absolute;
+    left: 10px;
+    top: 165px;
+
+    p{
+      position: absolute;
+      bottom: 0;
+      margin: 0 0 47px 74px;
+      color: #0a5085;
+      font-family: $font2;
+      font-size: 30px;
+      font-weight: bold;
+    }
+    .empty {
+      position: absolute;
+      top: 0;
+      width: 100%;
+      height: 100%;
+      background: url('../img/progress-empty.png') no-repeat center;
+    }
+    .full {
+      position: absolute;
+      top: 0;
+      width: 100%;
+      height: 255px;
+
+      .inner{
+        background: url('../img/progress-full.png') no-repeat center top;
+        height: 0;
+        transition: height 2s linear;
+      }
+    }
+    .shine{
+      display: none;
+      position: absolute;
+      top: 0;
+      width: 100%;
+      height: 100%;
+      background: url('../img/progress-shine.png') no-repeat center;
+      -webkit-animation: shine 1s linear infinite;
+      -o-animation: shine 1s linear infinite;
+      animation: shine 1s linear infinite;
+    }
+  }
+
+
+  .title {
+    text-align: center;
+    width: 400px;
+    margin: 0 0 0 255px;
+    line-height:1.1;
+    padding-top: 25px;
+    text-shadow: $text-shadow;
+
+    h1 {
+      font-family: $font2;
+      font-size: 25px;
+      font-weight: $bold;
+      color: $main-text-color;
+      margin:0;
+    }
+    p {
+      font-family: $font1;
+      margin:15px 0;
+      font-size: 17px;
+      font-weight: $regular;
+      color: #fff;
+      text-transform: none;
+    }
+  }
+
+  .draw-entries-container {
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 311px;
+    height: 138px;
+    background: url('../img/draw-entries-bg.png') no-repeat center / contain;
+
+    .outer {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      .inner {
+        width: 255px;
+        height: 50px;
+        position: absolute;
+        bottom: 25px;
+        left: 33px;
+        color: $main-text-color;
+        padding: 7px 5px;
+        transform: rotate(2.5deg);
+        line-height: 1;
+
+        h2{
+          font-size: 14px;
+          width: 80px;
+          text-align: right;
+          float: left;
+          margin: 3px 0 0;
+        }
+        p{
+          font-size: 24px;
+          width: 160px;
+          float: left;
+          padding-left: 10px;
+          margin: 3px 0 0;
+        }
+      }
+    }
+  }
+
+
+  /* ---- isotope ---- */
+
+  .isotope {
+    border: 3px solid #333;
+    width: 606px;
+    border-radius: 15px;
+    overflow: hidden;
+    box-sizing: border-box;
+    margin-left: 242px;
+  }
+
+  /* clear fix */
+  .isotope-container{
+    position: absolute;
+    bottom: 20px;
+  }
+
+  .isotope:after {
+    content: '';
+    display: block;
+    clear: both;
+  }
+
+  /* ---- .element-item ---- */
+
+  .element-item {
+    box-sizing: border-box;
+    position: relative;
+    display: inline-block;
+    margin: auto;
+    width: 100px;
+    height: 95px;
+    padding: 10px;
+    background: #888;
+    color: #262524;
+  }
+
+  .element-item > * {
+    margin: 0;
+    padding: 0;
+  }
+
+  .element-item .name {
+    position: absolute;
+    left: 10px;
+    top: 60px;
+    text-transform: none;
+    letter-spacing: 0;
+    font-size: 12px;
+    font-weight: normal;
+  }
+
+  .element-item .number {
+    position: absolute;
+    right: 8px;
+    top: 5px;
+    color: transparent;
+    display: none;
+  }
+
+ /* .element-item.blocked {
+    -webkit-filter: grayscale(100%);
+    filter: grayscale(100%);
+    cursor: pointer;
+
+  }
+
+  .element-item.blocked:hover {
+    -webkit-filter: grayscale(90%);
+    filter: grayscale(90%);
+  }*/
+
+  .item1 {
+    background: url('../img/isotope-bg.jpg') no-repeat 0 0;
+  }
+
+  .item2 {
+    background: url('../img/isotope-bg.jpg') no-repeat -100px 0;
+  }
+
+  .item3 {
+    background: url('../img/isotope-bg.jpg') no-repeat -200px 0;
+  }
+
+  .item4 {
+    background: url('../img/isotope-bg.jpg') no-repeat -300px 0;
+  }
+
+  .item5 {
+    background: url('../img/isotope-bg.jpg') no-repeat -400px 0;
+  }
+
+  .item6 {
+    background: url('../img/isotope-bg.jpg') no-repeat -500px 0;
+  }
+
+  .item7 {
+    background: url('../img/isotope-bg.jpg') no-repeat 0 -90px;
+  }
+
+  .item8 {
+    background: url('../img/isotope-bg.jpg') no-repeat -100px -90px;
+  }
+
+  .item9 {
+    background: url('../img/isotope-bg.jpg') no-repeat -200px -90px;
+  }
+
+  .item10 {
+    background: url('../img/isotope-bg.jpg') no-repeat -300px -90px;
+  }
+  .item11 {
+    background: url('../img/isotope-bg.jpg') no-repeat -400px -90px;
+  }
+  .item12 {
+    background: url('../img/isotope-bg.jpg') no-repeat -500px -90px;
+  }
+  .item13 {
+    background: url('../img/isotope-bg.jpg') no-repeat 0 -180px;
+  }
+
+  .item14 {
+    background: url('../img/isotope-bg.jpg') no-repeat -100px -180px;
+  }
+
+  .item15 {
+    background: url('../img/isotope-bg.jpg') no-repeat -200px -180px;
+  }
+
+  .item16 {
+    background: url('../img/isotope-bg.jpg') no-repeat -300px -180px;
+  }
+  .item17 {
+    background: url('../img/isotope-bg.jpg') no-repeat -400px -180px;
+  }
+  .item18 {
+    background: url('../img/isotope-bg.jpg') no-repeat -500px -180px;
+  }
+  .item19 {
+    background: url('../img/isotope-bg.jpg') no-repeat 0 -275px;
+  }
+  .item20 {
+    background: url('../img/isotope-bg.jpg') no-repeat -100px -275px;
+  }
+
+  .item21 {
+    background: url('../img/isotope-bg.jpg') no-repeat -200px -275px;
+  }
+
+  .item22 {
+    background: url('../img/isotope-bg.jpg') no-repeat -300px -275px;
+  }
+
+  .item23 {
+    background: url('../img/isotope-bg.jpg') no-repeat -400px -275px;
+  }
+  .item24 {
+    background: url('../img/isotope-bg.jpg') no-repeat -500px -275px;
+  }
+
+  .item1.blocked {
+    background: url('../img/isotope-bg-bw.jpg') no-repeat 0 0;
+  }
+
+  .item2.blocked {
+    background: url('../img/isotope-bg-bw.jpg') no-repeat -100px 0;
+  }
+
+  .item3.blocked {
+    background: url('../img/isotope-bg-bw.jpg') no-repeat -200px 0;
+  }
+
+  .item4.blocked {
+    background: url('../img/isotope-bg-bw.jpg') no-repeat -300px 0;
+  }
+
+  .item5.blocked {
+    background: url('../img/isotope-bg-bw.jpg') no-repeat -400px 0;
+  }
+
+  .item6.blocked {
+    background: url('../img/isotope-bg-bw.jpg') no-repeat -500px 0;
+  }
+
+  .item7.blocked {
+    background: url('../img/isotope-bg-bw.jpg') no-repeat 0 -90px;
+  }
+
+  .item8.blocked {
+    background: url('../img/isotope-bg-bw.jpg') no-repeat -100px -90px;
+  }
+
+  .item9.blocked {
+    background: url('../img/isotope-bg-bw.jpg') no-repeat -200px -90px;
+  }
+
+  .item10.blocked {
+    background: url('../img/isotope-bg-bw.jpg') no-repeat -300px -90px;
+  }
+  .item11.blocked {
+    background: url('../img/isotope-bg-bw.jpg') no-repeat -400px -90px;
+  }
+  .item12.blocked {
+    background: url('../img/isotope-bg-bw.jpg') no-repeat -500px -90px;
+  }
+  .item13.blocked {
+    background: url('../img/isotope-bg-bw.jpg') no-repeat 0 -180px;
+  }
+
+  .item14.blocked {
+    background: url('../img/isotope-bg-bw.jpg') no-repeat -100px -180px;
+  }
+
+  .item15.blocked {
+    background: url('../img/isotope-bg-bw.jpg') no-repeat -200px -180px;
+  }
+
+  .item16.blocked {
+    background: url('../img/isotope-bg-bw.jpg') no-repeat -300px -180px;
+  }
+  .item17.blocked {
+    background: url('../img/isotope-bg-bw.jpg') no-repeat -400px -180px;
+  }
+  .item18.blocked {
+    background: url('../img/isotope-bg-bw.jpg') no-repeat -500px -180px;
+  }
+  .item19.blocked {
+    background: url('../img/isotope-bg-bw.jpg') no-repeat 0 -275px;
+  }
+  .item20.blocked {
+    background: url('../img/isotope-bg-bw.jpg') no-repeat -100px -275px;
+  }
+
+  .item21.blocked {
+    background: url('../img/isotope-bg-bw.jpg') no-repeat -200px -275px;
+  }
+
+  .item22.blocked {
+    background: url('../img/isotope-bg-bw.jpg') no-repeat -300px -275px;
+  }
+
+  .item23.blocked {
+    background: url('../img/isotope-bg-bw.jpg') no-repeat -400px -275px;
+  }
+  .item24.blocked {
+    background: url('../img/isotope-bg-bw.jpg') no-repeat -500px -275px;
+  }
+
+  .scratch-container {
+    z-index: 11;
+    display: none;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 50%;
+    transform: translateY(-50%);
+    left: 0;
+    right: 0;
+    margin: auto;
+    background: rgba(0, 0, 0, 0.7);
+    transition: height 0.5s linear, width 0.5s linear;
+
+    .outer {
+      width: 100%;
+      height: 100%;
+      position: relative;
+
+      .inner {
+        position: absolute;
+        margin: auto;
+        top: 50%;
+        transform: translateY(-50%);
+        left: 0;
+        right: 0;
+        opacity: 0;
+        transition: opacity 0.5s linear;
+        width: 808px;
+        height: 410px;
+
+        .close {
+          cursor: pointer;
+        }
+
+
+        #scratch-content{
+          height: auto;
+          border-radius: 5px;
+
+          .content-box{
+            width: 100%;
+            height: 100%;
+
+            .prize-detail{
+              position: absolute;
+              z-index: 10;
+              display: none;
+              line-height: 1.1;
+
+              h1{
+                margin: 40px 0 10px 88px;
+                font-weight: $bold;
+                color: $main-text-color;
+                font-family: $font2;
+                width: 637px;
+                text-align: center;
+                font-size: 48px;
+              }
+              p{
+                color: #fff;
+                width: 350px;
+                text-shadow: $text-shadow;
+                font-size: 35px;
+                margin-left: 120px;
+                margin-top: 0;
+                margin-bottom: 0;
+                text-align: center;
+                font-family: $font1;
+
+                button{
+                  background: url('../img/claim-btn.png')no-repeat center;
+                  width: 256px;
+                  height: 73px;
+                  border: none;
+                  color: #fff;
+                  text-shadow: $text-shadow;
+                  font-size: 40px;
+                  font-family: $font1;
+                  margin-top: 20px;
+                  padding-bottom: 5px;
+                }
+              }
+
+            }
+
+            img{
+              margin: 0 auto 5px;
+              display: block;
+              border-radius: 25px;
+            }
+            .scratchpad{
+              margin: auto;
+              width: 808px;
+              height: 410px;
+              border-radius: 20px;
+
+              canvas{
+                border-radius: 25px;
+              }
+            }
+          }
+        }
+
+      }
+    }
+
+  }
+
+
+ /* prize status*/
+  .prize-status-container{
+    width: 145px;
+    position: absolute;
+    right:0;
+    bottom: 5px;
+    padding: 5px;
+    text-shadow: $text-shadow;
+
+    h1{
+      margin: 0 0 5px 0;
+      font-size: 24px;
+      font-family: $font2;
+      color: $main-text-color;
+      text-align: center;
+      line-height: 1;
+    }
+
+    p{
+      margin: 0 0 5px 0;
+      color: #fff;
+      font-size: 16px;
+      font-family: $font1;
+      line-height: 1;
+      text-align: center;
+    }
+
+    .status{
+      color: #fff;
+      text-align: center;
+      font-family: $font2;
+      font-size: 24px;
+      font-weight: $bold;
+
+      .tick{
+        border: 2px #fff solid;
+        border-radius: 15px;
+        margin-top: -5px;
+      }
+    }
+
+  }
+
+  .info-popup-btn{
+    width: 80px;
+    height: 80px;
+    position: absolute;
+    bottom: 13px;
+    left: 150px;
+    cursor: pointer;
+
+
+    img{
+      width: 100%;
+    }
+  }
+
+  .info-popup {
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.8);
+    position: absolute;
+    top: 0;
+    z-index: 12;
+    display: none;
+
+    .inner {
+      width: 635px;
+      height: 332px;
+      background: url('../img/info-bg.jpg') no-repeat center;
+      margin: 100px auto;
+      position: absolute;
+      left: 0;
+      right: 0;
+      border-radius: 25px;
+
+      .close-info {
+        width: 50px;
+        height: 50px;
+        position: absolute;
+        right: -15px;
+        top: -15px;
+        cursor: pointer;
+        img {
+          width: 100%;
+        }
+      }
+
+      h1 {
+        text-align: center;
+        font-size: 24px;
+        color: $main-text-color;
+        font-family: $font2;
+      }
+
+      p {
+        text-align: center;
+        font-size: 20px;
+        color: $main-text-color;
+        font-family: $font2;
+      }
+    }
+  }
+}
+
+.main-container .prize-status-container .status.active{
+  color: #dca00e;
+
+  .tick{
+    border-color: #dca00e;
+  }
+}
+
+
+.button {
+  display: inline-block;
+  padding: 0.5em 1.0em;
+  background: #EEE;
+  border: none;
+  border-radius: 7px;
+  background-image: linear-gradient(to bottom, hsla(0, 0%, 0%, 0), hsla(0, 0%, 0%, 0.2));
+  color: #222;
+  font-family: sans-serif;
+  font-size: 16px;
+  text-shadow: 0 1px white;
+  cursor: pointer;
+}
+
+.button:hover {
+  background-color: #8CF;
+  text-shadow: 0 1px hsla(0, 0%, 100%, 0.5);
+  color: #222;
+}
+
+.button:active,
+.button.is-checked {
+  background-color: #28F;
+}
+
+.button.is-checked {
+  color: white;
+  text-shadow: 0 -1px hsla(0, 0%, 0%, 0.8);
+}
+
+.button:active {
+  box-shadow: inset 0 1px 10px hsla(0, 0%, 0%, 0.8);
+}
+
+/* ---- button-group ---- */
+
+.button-group:after {
+  content: '';
+  display: block;
+  clear: both;
+}
+
+.button-group .button {
+  float: left;
+  border-radius: 0;
+  margin-left: 0;
+  margin-right: 1px;
+}
+
+.button-group .button:first-child {
+  border-radius: 0.5em 0 0 0.5em;
+}
+
+.button-group .button:last-child {
+  border-radius: 0 0.5em 0.5em 0;
+}
+
+@keyframes shine {
+  0%{
+    opacity: 0;
+  }
+  50%{
+    opacity:1;
+  }
+  100%{
+    opacity: 0;
+  }
+}
+
+@-ms-keyframes shine {
+  0%{
+    opacity: 0;
+  }
+  50%{
+    opacity:1;
+  }
+  100%{
+    opacity: 0;
+  }
+}
+
+@-moz-keyframes shine {
+  0%{
+    opacity: 0;
+  }
+  50%{
+    opacity:1;
+  }
+  100%{
+    opacity: 0;
+  }
+}
+
+@-webkit-keyframes shine {
+  0% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}

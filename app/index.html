@@ -1,0 +1,243 @@
+<!doctype html>
+<html class="no-js">
+<head>
+  <meta charset="utf-8">
+  <title>FireShell by @toddmotto</title>
+
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="description" content="">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+
+  <link href="//www.google-analytics.com" rel="dns-prefetch">
+  <link href="//ajax.googleapis.com" rel="dns-prefetch">
+  <link href="assets/css/style.min.css" rel="stylesheet">
+  <link href='https://fonts.googleapis.com/css?family=Alegreya:400,700' rel='stylesheet' type='text/css'>
+  <link href='https://fonts.googleapis.com/css?family=Alegreya+Sans+SC:400,700' rel='stylesheet' type='text/css'>
+  <script src="assets/js/vendor/modernizr-2.6.2.min.js"></script>
+
+
+</head>
+<body>
+
+<div class="main-container">
+
+  <!--logo-->
+  <div class="logo"></div>
+
+  <!--title-->
+  <div class="title">
+    <h1>Play your favourite games
+      Earn rewards points
+      Fill the arrow</h1>
+
+    <p>Then, select a block to scratch and win an instant prize</p>
+  </div>
+
+  <!--progress arrow-->
+  <div class="progress-container">
+    <div class="empty"></div>
+    <div class="full">
+      <div class="inner">
+      </div>
+    </div>
+    <div class="shine"></div>
+    <p></p>
+  </div>
+
+
+  <!--draw entries-->
+  <div class="draw-entries-container">
+    <div class="outer">
+      <div class="inner">
+        <h2>Vegas Draw Entries:</h2>
+
+        <p>{{val}}</p>
+      </div>
+    </div>
+  </div>
+
+
+  <!--puzzle-->
+  <div class="isotope-container">
+    <div class="isotope">
+      <div class="element-item item1">
+        <p class="number"></p>
+      </div>
+      <div class="element-item item2">
+        <p class="number"></p>
+      </div>
+      <div class="element-item item3">
+        <p class="number"></p>
+      </div>
+      <div class="element-item item4">
+        <p class="number"></p>
+      </div>
+      <div class="element-item item5">
+        <p class="number"></p>
+      </div>
+      <div class="element-item item6">
+        <p class="number"></p>
+      </div>
+      <div class="element-item item7">
+        <p class="number"></p>
+      </div>
+      <div class="element-item item8">
+        <p class="number"></p>
+      </div>
+      <div class="element-item item9">
+        <p class="number"></p>
+      </div>
+      <div class="element-item item10">
+        <p class="number"></p>
+      </div>
+      <div class="element-item item11">
+        <p class="number"></p>
+      </div>
+      <div class="element-item item12">
+        <p class="number"></p>
+      </div>
+      <div class="element-item item13">
+        <p class="number"></p>
+      </div>
+      <div class="element-item item14">
+        <p class="number"></p>
+      </div>
+      <div class="element-item item15">
+        <p class="number"></p>
+      </div>
+      <div class="element-item item16">
+        <p class="number"></p>
+      </div>
+      <div class="element-item item17">
+        <p class="number"></p>
+      </div>
+      <div class="element-item item18">
+        <p class="number"></p>
+      </div>
+      <div class="element-item item19">
+        <p class="number"></p>
+      </div>
+      <div class="element-item item20">
+        <p class="number"></p>
+      </div>
+      <div class="element-item item21">
+        <p class="number"></p>
+      </div>
+      <div class="element-item item22">
+        <p class="number"></p>
+      </div>
+      <div class="element-item item23">
+        <p class="number"></p>
+      </div>
+      <div class="element-item item24">
+        <p class="number"></p>
+      </div>
+    </div>
+  </div>
+
+
+  <!--scratch and win-->
+  <div class="scratch-container">
+    <div class="outer">
+      <div class="inner">
+        <div id="scratch-content">
+
+          <div class="content-box">
+            <div class="prize-detail">
+              <h1>congratulations</h1>
+
+              <p>
+                You’ve won
+                xxxx bonus entries
+                into the Las Vegas draw
+                <button>claim</button>
+              </p>
+
+            </div>
+
+            <div id="scratchpad" class="scratchpad">
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!--prize status-->
+  <div class="prize-status-container">
+    <h1>your prize status</h1>
+    <p>Boost your prizes by meeting the deposit
+      requirements</p>
+
+    <div class="status silver">
+      silver
+      <div class="tick">
+        &#10004;
+      </div>
+    </div>
+
+    <div class="status gold">
+      gold
+      <div class="tick">
+        &#10004;
+      </div>
+    </div>
+
+    <div class="status diamond">
+      diamond
+      <div class="tick">
+        &#10004;
+      </div>
+    </div>
+  </div>
+
+  <!--info-->
+  <div class="info-popup-btn">
+    <img src="assets/img/info-btn.png">
+  </div>
+
+  <div class="info-popup">
+    <div class="inner">
+      <div class="close-info">
+        <img src="assets/img/info-close-btn.png">
+      </div>
+      <h1>how to play</h1>
+      <p>details</p>
+    </div>
+  </div>
+
+</div>
+
+<!--  <div id="sorts" class="button-group">
+    <button class="button is-checked" data-sort-by="original-order">original order</button>
+    <button class="button" data-sort-by="number">number</button>
+  </div>-->
+
+
+<script src="assets/js/vendor/jquery-1.10.2.min.js"></script>
+<script>window.jQuery || document.write('<script src="assets/js/vendor/jquery-1.10.2.min.js"><\/script>');</script>
+<script src="assets/js/vendor/isotope.pkgd.min.js"></script>
+<script type="text/javascript" src="assets/js/vendor/wScratchPad.js"></script>
+<script src="assets/js/scripts.min.js"></script>
+
+
+<script>
+
+
+  (function (f, i, r, e, s, h, l) {
+    i['GoogleAnalyticsObject'] = s;
+    f[s] = f[s] || function () {
+        (f[s].q = f[s].q || []).push(arguments)
+      }, f[s].l = 1 * new Date();
+    h = i.createElement(r),
+      l = i.getElementsByTagName(r)[0];
+    h.async = 1;
+    h.src = e;
+    l.parentNode.insertBefore(h, l)
+  })(window, document, 'script', '//www.google-analytics.com/analytics.js', 'ga');
+  ga('create', 'UA-XXXXXXXX-XX');
+  ga('send', 'pageview');
+</script>
+
+</body>
+</html>
